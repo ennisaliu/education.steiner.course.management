@@ -7,3 +7,4 @@ DROP SCHEMA IF EXISTS `course-management`;
 CREATE SCHEMA `course-management` DEFAULT CHARACTER SET utf8 ;
 USE `course-management`;
 
+--
