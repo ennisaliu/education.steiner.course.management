@@ -5,9 +5,7 @@ DROP SCHEMA IF EXISTS `course-management`;
 -- 
 
 CREATE SCHEMA `course-management` DEFAULT CHARACTER SET utf8 ;
-<<<<<<< HEAD
-USE `course-management`;
-=======
+
 USE `course-management`;
 
 
@@ -55,9 +53,6 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 (845622, 'Huber', 'Walter', 4, 8),
 (625342, 'Gerber', 'Roland', 3, 4);
 
-<<<<<<< HEAD
->>>>>>> branch 'develop' of https://github.com/ennisaliu/education.steiner.course.management
-=======
 
 
 -- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
@@ -66,6 +61,23 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 
 
 -- kursthemen (ktnr, themengebiet) - Sandro
+
+CREATE TABLE `course-management`.kursthemen (
+	tnr INT auto_increment NOT NULL,
+	themengebiet varchar(100) NULL,
+	CONSTRAINT kursthemen_PK PRIMARY KEY (tnr)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci;
+
+INSERT INTO `course-management`.kursthemen (themengebiet) 
+VALUES('Sicherheit und Umweltschutz'),
+('Fuehrung und Zusammenarbeit'),
+('Pc-Kurse'),
+('Arbeitstechnik'),
+('Projekte'),
+('Schulung');
 
 
 
@@ -82,5 +94,3 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 -- kurskontrolle (fnr, knr) Christoph
 
 
-
->>>>>>> branch 'develop' of https://github.com/ennisaliu/education.steiner.course.management
