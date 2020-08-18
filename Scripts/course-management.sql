@@ -73,16 +73,16 @@ COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
-VALUES(1, 'I', 343745, 'Steiner', 'Ren�', NULL, 3);
+VALUES(1, 'I', 343745, 'Steiner', 'René', NULL, 3);
 INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(2, 'E', NULL, 'Suter', 'Rolf', 'GigaSoft', NULL);
 INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
-VALUES(3, 'I', 554433, 'M�ller', 'Hugo', NULL, 1);
+VALUES(3, 'I', 554433, 'Müller', 'Hugo', NULL, 1);
 INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
-VALUES(4, 'I', 546789, 'M�ller', 'Franz', NULL, 4);
+VALUES(4, 'I', 546789, 'Müller', 'Franz', NULL, 4);
 INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(5, 'E', NULL, 'Vogt', 'Peter', 'Quasar', NULL);
@@ -184,7 +184,7 @@ COLLATE=utf8_general_ci;
 
 INSERT INTO `course-management`.kursthemen (themengebiet) 
 VALUES('Sicherheit und Umweltschutz'),
-('Fuehrung und Zusammenarbeit'),
+('Führung und Zusammenarbeit'),
 ('Pc-Kurse'),
 ('Arbeitstechnik'),
 ('Projekte'),
