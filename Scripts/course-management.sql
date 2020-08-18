@@ -7,7 +7,7 @@ DROP SCHEMA IF EXISTS `course-management`;
 CREATE SCHEMA `course-management` DEFAULT CHARACTER SET utf8 ;
 USE `course-management`;
 
---CREATE TABLE `person` (
+CREATE TABLE `person` (
   `pnr` int NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `vorname` varchar(100) DEFAULT NULL,
