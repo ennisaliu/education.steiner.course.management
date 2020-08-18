@@ -67,7 +67,7 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 -- kursleiter (klnr, status)  Johannes
 -- externe_kursleiter (klnr, ename, evorname, firma)
 -- interne_kursleiter (klnr, pnr, kurserfahrung)
-CREATE TABLE kursverwaltung.kursleiter (
+CREATE TABLE `course-management`.kursleiter (
 	klnr INT NOT NULL,
 	s varchar(2) NOT NULL,
 	pnr INT NULL,
@@ -81,28 +81,28 @@ ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO kursverwaltung.kursleiter
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
-VALUES(1, 'I', 343745, 'Steiner', 'René', NULL, 3);
-INSERT INTO kursverwaltung.kursleiter
+VALUES(1, 'I', 343745, 'Steiner', 'Renï¿½', NULL, 3);
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(2, 'E', NULL, 'Suter', 'Rolf', 'GigaSoft', NULL);
-INSERT INTO kursverwaltung.kursleiter
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
-VALUES(3, 'I', 554433, 'Müller', 'Hugo', NULL, 1);
-INSERT INTO kursverwaltung.kursleiter
+VALUES(3, 'I', 554433, 'Mï¿½ller', 'Hugo', NULL, 1);
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
-VALUES(4, 'I', 546789, 'Müller', 'Franz', NULL, 4);
-INSERT INTO kursverwaltung.kursleiter
+VALUES(4, 'I', 546789, 'Mï¿½ller', 'Franz', NULL, 4);
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(5, 'E', NULL, 'Vogt', 'Peter', 'Quasar', NULL);
-INSERT INTO kursverwaltung.kursleiter
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(6, 'I', 123987, 'Huber', 'Walter', NULL, 3);
-INSERT INTO kursverwaltung.kursleiter
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(7, 'E', NULL, 'Krieg', 'Stefan', 'Funkenflug', NULL);
-INSERT INTO kursverwaltung.kursleiter
+INSERT INTO `course-management`.kursleiter
 (klnr, s, pnr, name, vorname, firma, kerf)
 VALUES(8, 'E', NULL, 'Freundlich', 'Andreas', 'Harmonie', NULL);
 
