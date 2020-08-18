@@ -104,7 +104,7 @@ VALUES(8, 'E', NULL, 'Freundlich', 'Andreas', 'Harmonie', NULL);
 
 -- kurskontrolle (fnr, knr) Ennis
 
-CREATE TABLE `Kurskontrolle` (
+CREATE TABLE `kurskontrolle` (
   `FNr` int NOT NULL,
   `KNr` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
