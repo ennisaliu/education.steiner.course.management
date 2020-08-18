@@ -64,9 +64,47 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 
 
 
--- kursleiter (klnr, status)  Johanns
+-- kursleiter (klnr, status)  Johannes
 -- externe_kursleiter (klnr, ename, evorname, firma)
 -- interne_kursleiter (klnr, pnr, kurserfahrung)
+CREATE TABLE `course-management`.kursleiter (
+	klnr INT NOT NULL,
+	s varchar(2) NOT NULL,
+	pnr INT NULL,
+	name varchar(100) NULL,
+	vorname varchar(100) NULL,
+	firma varchar(100) NULL,
+	kerf int NULL,
+	CONSTRAINT kursleiter_pk PRIMARY KEY (klnr)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(1, 'I', 343745, 'Steiner', 'Ren�', NULL, 3);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(2, 'E', NULL, 'Suter', 'Rolf', 'GigaSoft', NULL);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(3, 'I', 554433, 'M�ller', 'Hugo', NULL, 1);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(4, 'I', 546789, 'M�ller', 'Franz', NULL, 4);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(5, 'E', NULL, 'Vogt', 'Peter', 'Quasar', NULL);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(6, 'I', 123987, 'Huber', 'Walter', NULL, 3);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(7, 'E', NULL, 'Krieg', 'Stefan', 'Funkenflug', NULL);
+INSERT INTO `course-management`.kursleiter
+(klnr, s, pnr, name, vorname, firma, kerf)
+VALUES(8, 'E', NULL, 'Freundlich', 'Andreas', 'Harmonie', NULL);
 
 
 
@@ -92,6 +130,30 @@ ALTER TABLE `course-management`.person ADD CONSTRAINT Personen_FK FOREIGN KEY (f
 
 -- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
 
+CREATE TABLE `course-management`.kurse (
+	knr INT NOT NULL,
+	kursbezeichnung varchar(100) NULL,
+	kursort varchar(100) NULL,
+	tnr INT NULL,
+	CONSTRAINT kurse_PK PRIMARY KEY (knr)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci;
+
+INSERT INTO `course-management`.kurse (knr, kursbezeichnung, kursort, tnr) VALUES
+(123, 'Arbeitshygiene', '2510.EG.25', 1),
+(562, 'Führen einer Gruppe', '1010.4.08', 2),
+(234, 'Präsentationstechnik', '1010.4.08', 4),
+(341, 'Textverarbeitung', '2015.1.10', 3),
+(245, 'Konstenschätzung', '1010.2.05', 5),
+(412, 'Tabellenkalkulation', '2015.1.10', 3),
+(454, 'Elektrostatische Aufladung', '4001.EG.20', 1),
+(255, 'Datenbanken', '2015.2.05', 3),
+(455, 'Terminplanung', '1010.4.08', 5),
+(345, 'Schwierige Gespräche führen', '1010.2.05', 2),
+(283, 'Abfallentsorgung', '4001.EG.20', 1),
+(776, 'Wartung von Anlagen', '1010.2.05', 4);
 
 
 
