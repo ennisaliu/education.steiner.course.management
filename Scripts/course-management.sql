@@ -80,7 +80,6 @@ VALUES('Sicherheit und Umweltschutz'),
 ('Schulung');
 
 
-
 -- kursleiter (klnr, status)  Johanns
 -- externe_kursleiter (klnr, ename, evorname, firma)
 -- interne_kursleiter (klnr, pnr, kurserfahrung)
