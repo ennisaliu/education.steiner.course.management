@@ -11,6 +11,7 @@ USE `course-management`;
 USE `course-management`;
 
 
+-- funktion (fnr, funktion)
 -- Tabelle erzeugen
 CREATE TABLE `funktion` (
   `fnr` int NOT NULL,
@@ -26,7 +27,7 @@ INSERT INTO `course-management`.funktion (fnr, funktion) VALUES(3, 'Chemiker');
 INSERT INTO `course-management`.funktion (fnr, funktion) VALUES(4, 'Bereichsleiter');
 INSERT INTO `course-management`.funktion (fnr, funktion) VALUES(5, 'Informatiker');
 
-
+-- person (pnr, name, vorname, fnr, lohnstufe)
 CREATE TABLE `person` (
   `pnr` int NOT NULL,
   `name` varchar(100) DEFAULT NULL,
@@ -53,5 +54,33 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 (344556, 'Scherrer', 'Daniel', 2, 4),
 (845622, 'Huber', 'Walter', 4, 8),
 (625342, 'Gerber', 'Roland', 3, 4);
+
+<<<<<<< HEAD
+>>>>>>> branch 'develop' of https://github.com/ennisaliu/education.steiner.course.management
+=======
+
+
+-- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
+
+
+
+
+-- kursthemen (ktnr, themengebiet) - Sandro
+
+
+
+-- kursleiter (klnr, status)  Johanns
+-- externe_kursleiter (klnr, ename, evorname, firma)
+-- interne_kursleiter (klnr, pnr, kurserfahrung)
+
+
+
+-- kursbesuche (pnr, knr, klnr, datum) Christoph
+
+
+
+-- kurskontrolle (fnr, knr) Christoph
+
+
 
 >>>>>>> branch 'develop' of https://github.com/ennisaliu/education.steiner.course.management
