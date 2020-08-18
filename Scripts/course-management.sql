@@ -105,17 +105,41 @@ VALUES(8, 'E', NULL, 'Freundlich', 'Andreas', 'Harmonie', NULL);
 -- kurskontrolle (fnr, knr) Ennis
 
 CREATE TABLE `Kurskontrolle` (
-  `pnr` int NOT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  `vorname` varchar(100) DEFAULT NULL,
-  `fnr` int DEFAULT NULL,
-  `lohnstufe` varchar(100) DEFAULT NULL,
-    PRIMARY KEY (`pnr`)
+  `FNr` int NOT NULL,
+  `KNr` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-ALTER TABLE `course-management`.person ADD CONSTRAINT Personen_FK FOREIGN KEY (fnr) REFERENCES `course-management`.funktion(fnr);
-
+INSERT INTO `course-management`.kurskontrolle
+(fnr, knr)
+VALUES
+(1,123),
+(2,123),
+(3,123),
+(4,123),
+(2,562),
+(3,562),
+(4,562),
+(3,234),
+(5,234),
+(3,341),
+(3,245),
+(4,245),
+(2,412),
+(3,412),
+(1,454),
+(2,454),
+(3,454),
+(4,454),
+(3,216),
+(3,456),
+(4,455),
+(4,345),
+(1,283),
+(2,283),
+(3,283),
+(1,776),
+(2,776),
+(5,245);
 
 
 -- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
