@@ -82,6 +82,31 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 
 -- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
 
+CREATE TABLE `course-management`.kurse (
+	knr INT NOT NULL,
+	kursbezeichnung varchar(100) NULL,
+	kursort varchar(100) NULL,
+	tnr INT NULL,
+	CONSTRAINT kurse_PK PRIMARY KEY (knr),
+	CONSTRAINT kurse_FK FOREIGN KEY (tnr) REFERENCES `course-management`.kursthemen(tnr)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci;
+
+INSERT INTO `course-management`.kurse (knr, kursbezeichnung, kursort, tnr) VALUES
+(123, 'Arbeitshygiene', '2510.EG.25', 1),
+(562, 'Führen einer Gruppe', '1010.4.08', 2),
+(234, 'Präsentationstechnik', '1010.4.08', 4),
+(341, 'Textverarbeitung', '2015.1.10', 3),
+(245, 'Konstenschätzung', '1010.2.05', 5),
+(412, 'Tabellenkalkulation', '2015.1.10', 3),
+(454, 'Elektrostatische Aufladung', '4001.EG.20', 1),
+(255, 'Datenbanken', '2015.2.05', 3),
+(455, 'Terminplanung', '1010.4.08', 5),
+(345, 'Schwierige Gespräche führen', '1010.2.05', 2),
+(283, 'Abfallentsorgung', '4001.EG.20', 1),
+(776, 'Wartung von Anlagen', '1010.2.05', 4);
 
 
 
