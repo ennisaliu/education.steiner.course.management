@@ -105,8 +105,10 @@ VALUES(8, 'E', NULL, 'Freundlich', 'Andreas', 'Harmonie', NULL);
 -- kurskontrolle (fnr, knr) Ennis
 
 CREATE TABLE `kurskontrolle` (
+  `kid` INT auto_increment NOT NULL,
   `fnr` int NOT NULL,
-  `knr` int NOT NULL
+  `knr` int NOT NULL,
+  PRIMARY KEY (`kid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO `course-management`.kurskontrolle
@@ -130,8 +132,8 @@ VALUES
 (2,454),
 (3,454),
 (4,454),
-(3,216),
-(3,456),
+(3,255),
+(3,455),
 (4,455),
 (4,345),
 (1,283),
@@ -194,7 +196,7 @@ VALUES('Sicherheit und Umweltschutz'),
 -- Foreign Keys -- Ennis
 
 ALTER TABLE `course-management`.kurse ADD CONSTRAINT kurse_fk FOREIGN KEY (tnr) REFERENCES `course-management`.kursthemen(tnr);
-ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_fk FOREIGN KEY (fnr) REFERENCES `course-management`.funktion(fnr);
-ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_fk1 FOREIGN KEY (knr) REFERENCES `course-management`.kurse(knr);
+-- ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_fk FOREIGN KEY (fnr) REFERENCES `course-management`.funktion(fnr);
+-- ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_fk1 FOREIGN KEY (knr) REFERENCES `course-management`.kurse(knr);
 
 
