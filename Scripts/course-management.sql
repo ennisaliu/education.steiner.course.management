@@ -5,6 +5,7 @@ DROP SCHEMA IF EXISTS `course-management`;
 -- 
 
 CREATE SCHEMA `course-management` DEFAULT CHARACTER SET utf8 ;
+
 USE `course-management`;
 
 
@@ -75,5 +76,45 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 
 -- kurskontrolle (fnr, knr) Christoph
 
+
+
+
+
+-- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
+
+
+
+
+-- kursthemen (ktnr, themengebiet) - Sandro
+
+CREATE TABLE `course-management`.kursthemen (
+	tnr INT auto_increment NOT NULL,
+	themengebiet varchar(100) NULL,
+	CONSTRAINT kursthemen_PK PRIMARY KEY (tnr)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci;
+
+INSERT INTO `course-management`.kursthemen (themengebiet) 
+VALUES('Sicherheit und Umweltschutz'),
+('Fuehrung und Zusammenarbeit'),
+('Pc-Kurse'),
+('Arbeitstechnik'),
+('Projekte'),
+('Schulung');
+
+
+-- kursleiter (klnr, status)  Johanns
+-- externe_kursleiter (klnr, ename, evorname, firma)
+-- interne_kursleiter (klnr, pnr, kurserfahrung)
+
+
+
+-- kursbesuche (pnr, knr, klnr, datum) Christoph
+
+
+
+-- kurskontrolle (fnr, knr) Christoph
 
 
