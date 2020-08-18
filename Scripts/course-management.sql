@@ -74,9 +74,19 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 
 
 
--- kurskontrolle (fnr, knr) Christoph
+-- kurskontrolle (fnr, knr) Ennis
+
+CREATE TABLE `Kurskontrolle` (
+  `pnr` int NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `vorname` varchar(100) DEFAULT NULL,
+  `fnr` int DEFAULT NULL,
+  `lohnstufe` varchar(100) DEFAULT NULL,
+    PRIMARY KEY (`pnr`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
+ALTER TABLE `course-management`.person ADD CONSTRAINT Personen_FK FOREIGN KEY (fnr) REFERENCES `course-management`.funktion(fnr);
 
 
 
