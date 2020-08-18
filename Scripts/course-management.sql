@@ -54,16 +54,6 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 (625342, 'Gerber', 'Roland', 3, 4);
 
 
-
--- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
-
-
-
-
--- kursthemen (ktnr, themengebiet) - Sandro
-
-
-
 -- kursleiter (klnr, status)  Johannes
 -- externe_kursleiter (klnr, ename, evorname, firma)
 -- interne_kursleiter (klnr, pnr, kurserfahrung)
@@ -175,11 +165,6 @@ VALUES('Sicherheit und Umweltschutz'),
 ('Arbeitstechnik'),
 ('Projekte'),
 ('Schulung');
-
-
--- kursleiter (klnr, status)  Johanns
--- externe_kursleiter (klnr, ename, evorname, firma)
--- interne_kursleiter (klnr, pnr, kurserfahrung)
 
 
 
