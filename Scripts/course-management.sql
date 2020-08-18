@@ -87,8 +87,7 @@ CREATE TABLE `course-management`.kurse (
 	kursbezeichnung varchar(100) NULL,
 	kursort varchar(100) NULL,
 	tnr INT NULL,
-	CONSTRAINT kurse_PK PRIMARY KEY (knr),
-	CONSTRAINT kurse_FK FOREIGN KEY (tnr) REFERENCES `course-management`.kursthemen(tnr)
+	CONSTRAINT kurse_PK PRIMARY KEY (knr)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8
