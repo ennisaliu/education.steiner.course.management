@@ -54,7 +54,44 @@ VALUES(100001, 'Steffen', 'Felix', 3, 5),
 
 
 
--- kurs (knr, kursbezeichnung, ktnr, kursort) - Sandro
+-- kurs (knr, kursbezeichnung, ktnr, kursort) - Johannes
+CREATE TABLE `kursbesuche` (
+  `kb-id` int NOT NULL AUTO_INCREMENT,
+  `pnr` int NOT NULL,
+  `knr` int NOT NULL,
+  `klnr` int NOT NULL,
+  `datum` date NOT NULL,
+  PRIMARY KEY (`kb-id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(1, 100001, 245, 4, '2008-07-23');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(2, 100001, 412, 2, '2006-08-07');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(3, 100001, 454, 7, '2007-01-12');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(4, 345678, 123, 6, '2007-02-03');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(5, 345678, 776, 3, '2008-04-15');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(6, 334556, 412, 2, '2007-07-10');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(7, 334556, 412, 2, '2006-08-06');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(8, 625342, 255, 1, '2008-07-21');
+INSERT INTO course-management.kursbesuche
+(`kb-id`, pnr, knr, klnr, datum)
+VALUES(9, 625342, 345, 8, '2007-11-07');
+
 
 
 
