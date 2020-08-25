@@ -193,7 +193,7 @@ VALUES('Sicherheit und Umweltschutz'),
 ('Schulung');
 
 
--- Foreign Keys -- Ennis
+-- Foreign Keys --- Ennis
 
 
 ALTER TABLE `course-management`.kurse ADD CONSTRAINT kurse_fk FOREIGN KEY (tnr) REFERENCES `course-management`.kursthemen(tnr);
