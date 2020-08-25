@@ -195,6 +195,7 @@ VALUES('Sicherheit und Umweltschutz'),
 
 -- Foreign Keys -- Ennis
 
+
 ALTER TABLE `course-management`.kurse ADD CONSTRAINT kurse_fk FOREIGN KEY (tnr) REFERENCES `course-management`.kursthemen(tnr);
 -- KEY `kurskontrolle_FK` (`fnr`),
  --  CONSTRAINT `kurskontrolle_FK` FOREIGN KEY (`fnr`) REFERENCES `funktion` (`fnr`)
