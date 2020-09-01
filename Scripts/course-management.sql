@@ -193,13 +193,34 @@ VALUES('Sicherheit und Umweltschutz'),
 ('Schulung');
 
 
+CREATE TABLE `course-management`.kursbesuche (
+	pnr INT NOT NULL,
+	knr int NOT NULL,
+	kinr int NOT NULL,
+	datum Date NOT NULL,
+	CONSTRAINT kursbesuche_PK PRIMARY KEY (pnr)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_general_ci;
+
+
+INSERT INTO `course-management`.kursbesuche (pnr, knr, kinr, datum) 
+VALUES(100001, 245, 4, '2008-06-08');
+
 -- Foreign Keys --- Ennis
 
 
 ALTER TABLE `course-management`.kurse ADD CONSTRAINT kurse_fk FOREIGN KEY (tnr) REFERENCES `course-management`.kursthemen(tnr);
--- KEY `kurskontrolle_FK` (`fnr`),
- --  CONSTRAINT `kurskontrolle_FK` FOREIGN KEY (`fnr`) REFERENCES `funktion` (`fnr`)
 ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_FK FOREIGN KEY (fnr) REFERENCES `course-management`.funktion(fnr);
--- ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_fk1 FOREIGN KEY (knr) REFERENCES `course-management`.kurse(knr);
-
 ALTER TABLE `course-management`.kurskontrolle ADD CONSTRAINT kurskontrolle_FK_1 FOREIGN KEY (knr) REFERENCES `course-management`.kurse(knr);
+
+
+
+
+
+
+
+
+
+
